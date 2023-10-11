@@ -8,9 +8,17 @@ body {
       font-size: 14px;
     }
   }
-.container {
-    width: 80%;
-    margin: 0 auto;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+.grid-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
   }
 h1{
 	font-size: 2em;
