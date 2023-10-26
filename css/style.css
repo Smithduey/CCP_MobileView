@@ -63,6 +63,8 @@ nav{
   background-color: #f2f2f2;
   padding: 20px;
   border: 5px solid#57343A;
+  width:100%;
+  max-width: 100%;
   }
 .text-container {
     grid-column:3;
