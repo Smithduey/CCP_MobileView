@@ -1,45 +1,195 @@
 
+html{
+  scroll-behavior: smooth;
+}
+nav li{
+  display:inline;
+  padding:20px;
 
+}
 
-@media screen and (min-width: 776px) {
-    body {
-      font-size: 14px;
-    }
+body{
+  background-color:#57343A;
+  font-size: 18px;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+}
+div{
+  position: relative;
+}
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -40px
   }
-    .grid-container {
+.skip a:focus {
+    top: 20px;
+    display: block;
+    text-decoration: underline  ;
+  }
+li a:hover,
+li a:focus {
+  text-decoration: underline;
+  outline: 2px solid #000;
+  }
+*:focus {
+    outline: 2px solid #000;
+    text-decoration: underline;
+  }
+nav{
+    background-color: #ddd;
+    padding: 25px 0;
+    text-align: center;
+  }
+.grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
+    grid-gap:20px;
     padding: 20px;
   }
-    .grid-item {
-    background-color: #f2f2f2;
-    padding: 20px;
+.grid-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 5px solid#57343A;
+  }
+.text-container {
+    grid-column:3;
+    grid-row:2;
+    gap: 15px;
+    border: 5px solid#57343A;
+    display: inline;
     text-align: center;
-    border: 1px solid #ddd;
+    justify-content: center;
+    height: fit-content;
+    place-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.grid-gallery {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1;
+  grid-row:4;
+  overflow: auto;
+  white-space: nowrap;
+  border: 5px solid#57343A;
+  height:fit-content;
+  margin: 20px;
+  gap: 20px;
+}
+
+.grid-gallery img {
+  max-width: 100%;
+  border: 5px solid#b78c97;
+}
+
+.grid-gallery a:focus {
+  top: 20px;
+  display: block;
+  text-decoration: underline  ;
+}
+
+.travel-body {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 5px solid#57343A;
   }
-@media screen and (min-width: 1120) {
-    body {
-      font-size: 18px;
-    }
-  }
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    padding: 20px;
-  }
-    .grid-item {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
+
+.likes {
+  grid-column: 2;
+  grid-row:4;
+  border: 5px solid#57343A;
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
+  display: inline;
+  height: fit-content;
+}
+
+
+.ingredients{
+  grid-column: 3;
+  grid-row:2;
+  border: 5px solid#57343A;
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
+  display: inline;
+  height: fit-content;
+}
+
+.info{
+  grid-column: 3;
+  grid-row:1;
+  border: 5px solid#57343A;
+  place-items: center;
+  text-align: left;
+  justify-content: center;
+  padding: 15px;
+  display: inline;
+  height: fit-content;
+}
+.recipe-steps{
+  grid-column: 3;
+  grid-row:3;
+  border: 5px solid#57343A;
+  place-items: center;
+  text-align: left;
+  justify-content: center;
+  padding: 15px;
+  display: inline;
+  height: fit-content;
+  overflow: auto;
+  max-height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.recipe-steps a:focus {
+  top: 20px;
+  display: block;
+  text-decoration: underline  ;
+}
+.text-caption{
+  grid-column:3;
+  grid-row:4;
+  gap: 15px;
+  border: 5px solid#57343A;
+  display: inline;
+  text-align: left;
+  justify-content: center;
+  height: fit-content;
+  place-items: center;
+}
+.pet{
+  grid-column: 1 / -1;
+  max-height: 600px;
+}
+
+.food{
+  grid-column: 1 /-1;
+  max-height: 600px;
+}
+
 h1{
-	font-size: 2em;
+	font-size:50px;
 	font-weight: bold;
-    font-family: monospace;
-    text-align: center;
+  font-family: monospace;
+  text-align: center;
+  background-color:#33292B;
+  color: #ddd;
 }
 
 
@@ -53,7 +203,7 @@ h2, h3{
 }
 
 img{
-    border: 5px solid#b78c97;
+    border: 5px solid#57343A;
     padding: 10px;
     border-top-right-radius: 30px;
     margin: 20px;
@@ -61,11 +211,13 @@ img{
     height: auto;
 }
 
-li{
+span::after{
+  content: "\a";
+  white-space: pre;
 
-    margin-left: 50px;
-	display: inline-block;
 }
+
+
 
 p {
    line-height: 2.5;
@@ -77,9 +229,6 @@ p {
 	text-align: center;
 }
 
-.active a{
-	text-decoration: none;;
-}
 
 a{
     color: blue
@@ -87,3 +236,16 @@ a{
 header nav ul a{
     color: black
 }
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+
+}
+}
+
