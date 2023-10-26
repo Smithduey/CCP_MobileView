@@ -247,7 +247,8 @@ p {
 
 
 a{
-    color: blue
+    color: blue;
+    text-decoration: underline;
 }
 header nav ul a{
     color: black
