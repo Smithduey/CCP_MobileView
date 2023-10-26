@@ -65,6 +65,7 @@ nav{
   border: 5px solid#57343A;
   width:100%;
   max-width: 100%;
+  overflow:auto;
   }
 .text-container {
     grid-column:3;
