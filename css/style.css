@@ -46,7 +46,7 @@ nav{
     background-color: #ddd;
     padding: 25px 0;
     text-align: center;
-    background-size:cover;
+    width:auto;
   }
 .grid-container {
     display: grid;
