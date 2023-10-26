@@ -96,13 +96,21 @@ nav{
 .grid-gallery a:focus {
   top: 20px;
   display: block;
-  text-decoration: underline  ;
+  text-decoration: underline;
 }
 
+.grid-gallery img a:focus {
+  top: 20px;
+  display: block;
+  text-decoration: underline  ;
+}
 .travel-body {
   background-color: #f2f2f2;
   padding: 20px;
   border: 5px solid#57343A;
+  }
+  .travel-body img{
+    width:400;
   }
 
 .likes {
@@ -227,6 +235,7 @@ p {
 .active{
 	background: white;
 	text-align: center;
+  text-decoration: underline;
 }
 
 
