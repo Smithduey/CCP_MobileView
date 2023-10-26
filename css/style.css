@@ -42,11 +42,13 @@ li a:focus {
     outline: 2px solid #000;
     text-decoration: underline;
   }
+header{
+  width:100%;
+}
 nav{
     background-color: #ddd;
     padding: 25px 0;
     text-align: center;
-    width:auto;
   }
 .grid-container {
     display: grid;
